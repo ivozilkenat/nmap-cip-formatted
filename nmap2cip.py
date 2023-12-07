@@ -98,7 +98,7 @@ def print_host_info(element_tree):
         
         print("OS:")
         if len(os_names) <= 0:
-            print(f"> {UNKNOWN}")
+            print(f"{INDENT}> {UNKNOWN}")
         else:
             for c, i in enumerate(os_names):
                 print(f"{INDENT}[{c + 1}] {i.name} ({i.confidence}%)")
