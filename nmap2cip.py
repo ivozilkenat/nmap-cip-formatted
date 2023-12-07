@@ -108,7 +108,7 @@ def print_host_info(element_tree):
         if len(services) > 0:
             print("Services:")
             for service in services:
-                print(f"- {service.port}/{service.protocol} {'' if service.product is None else ': ' + service.product} {'' if service.version is None else '(' + service.version + ')'}")
+                print(f"{INDENT}- {service.port}/{service.protocol} {'' if service.product is None else ': ' + service.product} {'' if service.version is None else '(' + service.version + ')'}")
         
         if len(ssh_public_keys) > 0:
             print("SSH public keys:")
