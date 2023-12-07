@@ -7,12 +7,14 @@ from collections import namedtuple, defaultdict
 
 DELIMITER_LENGTH = 50
 UNKNOWN = "<UNKNOWN>"
+INDENT = "    "
 
 import argparse
 import xml.etree.ElementTree as ET
 
+OS = namedtuple("OS", ["name", "confidence"])
 Service = namedtuple("Service", ["port", "protocol", "product", "version"])
-SSHPublicKey = namedtuple("SSHPublicKey", ["key", "type"])
+SSHPublicKey = namedtuple("SSHPublicKey", ["fingerprint", "type"])
 
 def check_none(string):
     return UNKNOWN if string is None else string
@@ -41,11 +43,17 @@ def print_host_info(element_tree):
                 
         # Get operating system
         os_element = host.find('os')
-        os_name = None
+        os_max_count, os_count = 3, 0
+        os_names = []
         if os_element is not None:
-            for osmatch in os_element.findall('osmatch'):
-                os_name = osmatch.get('name')
-                break  # Taking the first match
+            for osmatch in os_element.findall("osmatch"):
+                os_names.append(OS(
+                    osmatch.get("name"),
+                    osmatch.get("accuracy")
+                ))
+                os_count += 1
+                if os_count >= os_max_count:
+                    break
             
         # Get services
         services = []
@@ -66,17 +74,17 @@ def print_host_info(element_tree):
                     continue
                 
                 for table in script.findall("table"):
-                    key, algo = None, None
+                    fingerprint, algo = None, None
                     for el in table.findall("elem"):
                         k = el.get("key")
                         if k == "type":
                             algo = el.text
-                        elif k == "key":
-                            key = el.text
-                        if key is not None and algo is not None:
+                        elif k == "fingerprint":
+                            fingerprint = el.text
+                        if fingerprint is not None and algo is not None:
                             break
                     ssh_public_keys[port.get("portid")].append(SSHPublicKey(
-                        key,
+                        fingerprint,
                         algo
                     ))
                 
@@ -86,7 +94,15 @@ def print_host_info(element_tree):
         print()
         
         print(f"Hostname: {check_none(hostname)}")
-        print(f"OS: {check_none(os_name)}")
+        
+        
+        print("OS:")
+        if len(os_names) <= 0:
+            print(f"> {UNKNOWN}")
+        else:
+            for c, i in enumerate(os_names):
+                print(f"{INDENT}[{c + 1}] {i.name} ({i.confidence}%)")
+        
         print(f"MAC: {check_none(mac_address)}, IPv4: {check_none(ip_address)}")
         
         if len(services) > 0:
@@ -99,7 +115,7 @@ def print_host_info(element_tree):
             for port, values in ssh_public_keys.items():
                 print(f"- port: {port}")
                 for key in values:
-                    print(f"    > {key.key} ({key.type})")
+                    print(f"{INDENT}> {key.fingerprint} ({key.type})")
         
         print()
         
