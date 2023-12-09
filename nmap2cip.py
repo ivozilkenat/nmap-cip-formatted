@@ -220,6 +220,8 @@ def print_postscript(postscript):
     print(postscript)
 
 def merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6):
+    # ASSUMPTION: 2 hosts are equal if they share the same fingerprint
+    
     hosts = hosts_ipv4
     
     for host6 in hosts_ipv6:
@@ -228,7 +230,7 @@ def merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6):
             if host4.same_host(host6):
                 host4.merge_with(host6)
                 matched = True
-                break
+                # break
         if not matched:
             hosts.append(host6)
         
