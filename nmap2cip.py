@@ -8,6 +8,8 @@ import argparse
 import xml.etree.ElementTree as ET
 
 DELIMITER_LENGTH = 50
+DELIMTER_BIG = "="
+DELIMITER_SMALL = "-"
 UNKNOWN = "<UNKNOWN>"
 INDENT = "    "
 
@@ -44,6 +46,9 @@ class HostSystem:
         # TODO: correct assumption, that no new services can be found?
         
         self.ip_addresses += other_host.ip_addresses
+        
+    def fingerprint_identifier(self):
+        return " ".join(sorted(map(fingerprint2str, self.ssh_fingerprints_raw)))
      
     def _str_add_hostname(self):
         return f"Hostname: {check_none(self.hostname)}\n"
@@ -88,7 +93,7 @@ class HostSystem:
             for port, values in self.ssh_fingerprints.items():
                 output += f"- port: {port}\n"
                 for key in values:
-                    output += f"{INDENT}> {key.fingerprint} ({key.type})\n"   
+                    output += f"{INDENT}> {fingerprint2str(key)}\n"   
         return output
     
     def __str__(self) -> str:
@@ -105,6 +110,9 @@ class HostSystem:
 
 def check_none(string):
     return UNKNOWN if string is None else string
+
+def fingerprint2str(ssh_fingerprint):
+    return f"{ssh_fingerprint.fingerprint} ({ssh_fingerprint.type})"
 
 def get_hosts_from(filename):
     tree = ET.parse(filename)
@@ -198,12 +206,12 @@ def get_hosts_from(filename):
 
 def print_hosts(hosts):
     for c, host in enumerate(hosts):
-        print(f"[Host {c + 1}]".center(50, "="))
+        print(f"[Host {c + 1}]".center(DELIMITER_LENGTH, DELIMTER_BIG))
         print()
         print(host)
         print()
     
-    print("=" * DELIMITER_LENGTH)
+    print(DELIMTER_BIG * DELIMITER_LENGTH)
     
 def print_postscript(postscript):
     print()
@@ -226,6 +234,33 @@ def merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6):
         
     return hosts
 
+def host_fingerprint_dict(hosts):
+    fingerprints = defaultdict(list)
+    for h in hosts:
+        fingerprints[h.fingerprint_identifier()].append(h)
+    return fingerprints
+
+def print_hosts_by_fingerprints(host_fingerprint_dict):
+    host_count = 0
+    
+    for fingerprint, hosts in sorted(host_fingerprint_dict.items(), key=lambda x: len(x[0]), reverse=True):
+        if fingerprint == "":
+            print("[NO SSH KEY]".center(DELIMITER_LENGTH, DELIMTER_BIG))
+        elif len(hosts) == 1:
+            print("[SINGLE SSH KEY]".center(DELIMITER_LENGTH, DELIMTER_BIG))
+        else:
+            print("[SAME SSH KEY]".center(DELIMITER_LENGTH, DELIMTER_BIG))
+
+        for h in hosts:
+            print(f"[Host {host_count + 1}]".center(DELIMITER_LENGTH, DELIMITER_SMALL))
+            print()
+            print(h)
+            print()
+            
+            host_count += 1
+        
+        print(DELIMTER_BIG * DELIMITER_LENGTH)
+
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
@@ -239,7 +274,10 @@ if __name__ == "__main__":
     
     merged_hosts = merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6)
     
-    print_hosts(merged_hosts)
+    print_hosts_by_fingerprints(host_fingerprint_dict(merged_hosts))
+    
+    print()
+    print("OPTIONAL INFORMATION TO CONFIRM SCRIPT OUTPUT")
     
     print_postscript(postscript_out_ipv4)
     print_postscript(postscript_out_ipv6)
