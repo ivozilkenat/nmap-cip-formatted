@@ -13,7 +13,7 @@ DELIMITER_SMALL = "-"
 UNKNOWN = "<UNKNOWN>"
 INDENT = "    "
 
-IP = namedtuple("IP", ["address", "type"])
+IP = namedtuple("IP", ["address", "type", "confidence"])
 OS = namedtuple("OS", ["name", "confidence"])
 Service = namedtuple("Service", ["port", "protocol", "product", "version"])
 SSHFingerprint = namedtuple("SSHFingerprint", ["fingerprint", "type"])
@@ -40,12 +40,20 @@ class HostSystem:
         
     def same_host(self, other: object) -> bool:
         "Assumptions: both hosts use same encrpytion algorithms"
-        return any(fprint in other.ssh_fingerprints_raw  for fprint in self.ssh_fingerprints_raw) 
+        
+        same_fingerprints = any(fprint in other.ssh_fingerprints_raw for fprint in self.ssh_fingerprints_raw) if self.ssh_fingerprints != {} else False
+        same_mac_address = self.mac_address == other.mac_address if self.mac_address is not None else False
+        same_services = self.services == other.services if self.services != [] else False
+        
+        return same_fingerprints and same_mac_address and same_services
      
     def merge_with(self, other_host):
         # TODO: correct assumption, that no new services can be found?
         
-        self.ip_addresses += other_host.ip_addresses
+        new_ips = other_host.ip_addresses
+        adjusted_ips = [IP(ip[0], ip[1], "Merged by: ssh fingerprint, services, mac address") for ip in map(list, new_ips)]
+        
+        self.ip_addresses += adjusted_ips
         
     def fingerprint_identifier(self):
         return " ".join(sorted(map(fingerprint2str, self.ssh_fingerprints_raw)))
@@ -75,7 +83,7 @@ class HostSystem:
         else:
             output += "\n"
             for ip in self.ip_addresses:
-                output += f"{INDENT}- {ip.address} ({ip.type})\n"
+                output += f"{INDENT}- {ip.address} ({ip.type} - {ip.confidence})\n"
         return output
 
     def _str_add_services(self):
@@ -128,7 +136,7 @@ def get_hosts_from(filename):
         for addr in host.findall("address"):
             addr_type = addr.get("addrtype")
             if addr_type in ("ipv4", "ipv6"):
-                ip_address = IP(addr.get("addr"), addr_type)
+                ip_address = IP(addr.get("addr"), addr_type, "Native")
             elif addr_type == "mac":
                 mac_address = addr.get("addr")
                 
@@ -225,10 +233,11 @@ def merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6):
     for host6 in hosts_ipv6:
         matched = False
         for host4 in hosts_ipv4:
+            #break
             if host4.same_host(host6):
                 host4.merge_with(host6)
                 matched = True
-                break
+                
         if not matched:
             hosts.append(host6)
         
