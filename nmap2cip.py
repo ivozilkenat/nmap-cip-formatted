@@ -274,20 +274,25 @@ def print_hosts_by_fingerprints(host_fingerprint_dict):
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('filenameIPv4')
-    parser.add_argument('filenameIPv6')
+    parser.add_argument('--filenameIPv4', required=True)
+    parser.add_argument('--filenameIPv6', required=False)
     
     args = parser.parse_args()
     
     hosts_ipv4, postscript_out_ipv4 = get_hosts_from(args.filenameIPv4)
-    hosts_ipv6, postscript_out_ipv6 = get_hosts_from(args.filenameIPv6)
     
-    merged_hosts = merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6)
-    
+    if args.filenameIPv6 is not None:
+        hosts_ipv6, postscript_out_ipv6 = get_hosts_from(args.filenameIPv6)
+        merged_hosts = merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6)
+    else:
+        merged_hosts = hosts_ipv4
+        
     print_hosts_by_fingerprints(host_fingerprint_dict(merged_hosts))
     
     print()
     print("OPTIONAL INFORMATION TO CONFIRM SCRIPT OUTPUT")
     
     print_postscript(postscript_out_ipv4)
-    print_postscript(postscript_out_ipv6)
+    
+    if args.filenameIPv6 is not None:
+        print_postscript(postscript_out_ipv6)

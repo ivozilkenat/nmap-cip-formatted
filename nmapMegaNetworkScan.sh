@@ -15,18 +15,23 @@ if [ -z "$TARGET_NETWORK_IPv6" ]; then
     exit 1
 fi
 
-INTERFACE=${3:-"eth1"}
+OUT_NAME=$4
+INTERFACE=${5:-"eth1"}
 
-SCAN_OUT="scan6-out-$TARGET_NETWORK_IPv6.txt"
-OUT_IPv4="nmap-out-$TARGET_NETWORK_IPv4.xml"
-OUT_IPv6="nmap-out-$TARGET_NETWORK_IPv6.xml"
+SCAN_OUT="scan6-out-$OUT_NAME.txt"
+OUT_IPv4="nmap-out-ip4-$OUT_NAME.xml"
+OUT_IPv6="nmap-out-ip6-$OUT_NAME.xml"
 
-FILE_OUT="mega-scan-$OUT_IPv4-$OUT_IPv6-out.txt"
-
-sudo scan6 -i $INTERFACE -L > $SCAN_OUT
+FILE_OUT="mega-scan-$OUT_NAME.txt"
 
 sudo nmap -oX $OUT_IPv4 -sV -T5 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
 
-sudo nmap -6 -iL $SCAN_OUT -oX $OUT_IPv6 -sV -T5 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
+if [ "$TARGET_NETWORK_IPv6" != "skip" ]; then
+    sudo scan6 -i $INTERFACE -L > $SCAN_OUT
+    sudo nmap -6 -iL $SCAN_OUT -oX $OUT_IPv6 -sV -T5 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
+    python ./nmap2cip.py --filenameIPv4=$OUT_IPv4 --filenameIPv6=$OUT_IPv6 > $FILE_OUT
+    exit
+fi
 
-python ./nmap2cip.py $OUT_IPv4 $OUT_IPv6 > $FILE_OUT
+python ./nmap2cip.py --filenameIPv4=$OUT_IPv4 > $FILE_OUT
+echo ">>> SCAN FINISHED <<<"
