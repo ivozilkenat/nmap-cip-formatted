@@ -3,6 +3,18 @@
 TARGET_NETWORK_IPv4=$1
 TARGET_NETWORK_IPv6=$2
 
+# Check if TARGET_NETWORK_IPv4 is not provided
+if [ -z "$TARGET_NETWORK_IPv4" ]; then
+    echo "Error: TARGET_NETWORK_IPv4 not provided."
+    exit 1
+fi
+
+# Check if TARGET_NETWORK_IPv6 is not provided
+if [ -z "$TARGET_NETWORK_IPv6" ]; then
+    echo "Error: TARGET_NETWORK_IPv6 not provided."
+    exit 1
+fi
+
 INTERFACE=${3:-"eth1"}
 
 SCAN_OUT="scan6-out-$TARGET_NETWORK_IPv6.txt"
