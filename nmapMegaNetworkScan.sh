@@ -2,6 +2,8 @@
 
 TARGET_NETWORK_IPv4=$1
 TARGET_NETWORK_IPv6=$2
+OUT_NAME=$3
+
 
 # Check if TARGET_NETWORK_IPv4 is not provided
 if [ -z "$TARGET_NETWORK_IPv4" ]; then
@@ -15,8 +17,13 @@ if [ -z "$TARGET_NETWORK_IPv6" ]; then
     exit 1
 fi
 
-OUT_NAME=$4
-INTERFACE=${5:-"eth1"}
+if [ -z "$OUT_NAME" ]; then
+    echo "Error: Output file name not provided."
+    exit 1
+
+fi
+
+INTERFACE=${4:-"eth1"}
 
 SCAN_OUT="scan6-out-$OUT_NAME.txt"
 OUT_IPv4="nmap-out-ip4-$OUT_NAME.xml"
