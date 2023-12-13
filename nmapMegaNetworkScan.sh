@@ -37,6 +37,7 @@ if [ "$TARGET_NETWORK_IPv6" != "skip" ]; then
     sudo scan6 -i $INTERFACE -L > $SCAN_OUT
     sudo nmap -6 -iL $SCAN_OUT -oX $OUT_IPv6 -sV -T5 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
     python ./nmap2cip.py --filenameIPv4=$OUT_IPv4 --filenameIPv6=$OUT_IPv6 > $FILE_OUT
+    echo ">>> SCAN FINISHED <<<"
     exit
 fi
 
