@@ -31,11 +31,11 @@ OUT_IPv6="nmap-out-ip6-$OUT_NAME.xml"
 
 FILE_OUT="mega-scan-$OUT_NAME.txt"
 
-sudo nmap -oX $OUT_IPv4 -sV -T5 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
+sudo nmap -oX $OUT_IPv4 -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
 
 if [ "$TARGET_NETWORK_IPv6" != "skip" ]; then
     sudo scan6 -i $INTERFACE -L > $SCAN_OUT
-    sudo nmap -6 -iL $SCAN_OUT -oX $OUT_IPv6 -sV -T5 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
+    sudo nmap -6 -iL $SCAN_OUT -oX $OUT_IPv6 -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS $1
     python ./nmap2cip.py --filenameIPv4=$OUT_IPv4 --filenameIPv6=$OUT_IPv6 > $FILE_OUT
     echo ">>> SCAN FINISHED <<<"
     exit
