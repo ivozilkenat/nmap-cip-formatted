@@ -47,11 +47,11 @@ class HostSystem:
         
         return same_fingerprints and same_mac_address and same_services
      
-    def merge_with(self, other_host):
+    def merge_with(self, other_host, merge_reason = "Merged by: ssh fingerprint & services & mac address"):
         # TODO: correct assumption, that no new services can be found?
         
         new_ips = other_host.ip_addresses
-        adjusted_ips = [IP(ip[0], ip[1], "Merged by: ssh fingerprint, services, mac address") for ip in map(list, new_ips)]
+        adjusted_ips = [IP(ip[0], ip[1], merge_reason) for ip in map(list, new_ips)]
         
         self.ip_addresses += adjusted_ips
         
