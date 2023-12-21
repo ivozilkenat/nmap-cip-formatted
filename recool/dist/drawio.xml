@@ -1,0 +1,91 @@
+<mxfile>
+  <diagram id="9387d42d-8cee-48d9-98df-873b59553565" name="Network Plan">
+    <mxGraphModel dx="3000" dy="2000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"></mxCell>
+        <mxCell id="1" parent="0"></mxCell>
+        <mxCell id="86ab1953-dfb2-4e1a-8edb-a784cfa2cfc5" value="&lt;i&gt;octopus.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.1&lt;/strong&gt;&lt;br&gt;fd50:52:183::1&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;:53 - domain&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(dnsmasq 2.89)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Linux 3.1 (95%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="260" height="200" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="590f8b36-691a-43bc-9c5c-f64564cf5ffc" value="&lt;i&gt;flag-http-server.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.2&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fef9:ec95&lt;br&gt;&lt;br&gt;:80 - http&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(nginx 1.25.3)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="230" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="cc8ea86a-ed15-4c05-b670-1b8c848c81c2" value="&lt;i&gt;packet-challenge.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.5&lt;/strong&gt;&lt;br&gt;fd50:52:183::5&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;:6666 - irc&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="440" width="260" height="200" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="e40d264a-517d-4150-9998-9c0c7f87cbe3" value="&lt;i&gt;zero.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.20&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe72:fc48&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="670" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="1e655f43-aed6-4703-bcf1-fad55f2f3ebc" value="&lt;i&gt;one.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.21&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe30:dc86&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Linux 2.6.32 (94%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="880" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="16544d9f-1620-4939-94bf-8b82b1b64e31" value="&lt;i&gt;two.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.22&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe34:544b&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Linux 2.6.32 (94%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="1090" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="2dac233c-837e-494b-8c3d-507e4596d8c7" value="&lt;i&gt;three.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.23&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:feb4:3cae&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Linux 2.6.32 (94%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="1300" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="0f1eec52-de43-424b-afdd-1776774b5202" value="&lt;i&gt;four.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.24&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:feed:4928&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Linux 2.6.32 (94%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="0" y="1510" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="cbb5535f-8fe9-468b-a256-323fa0fc8eeb" value="&lt;i&gt;five.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.25&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe8b:1209&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Linux 2.6.32 (94%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="0" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="cad61af9-05c1-4422-b12a-776b7e428b0f" value="&lt;i&gt;six.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.26&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe1c:34e5&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="210" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="260f78ac-ffb7-4e8a-933c-29dea6f598fb" value="&lt;i&gt;seven.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.27&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe5b:7140&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="420" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="a1730fea-9906-4c2c-8db8-6fff52bef2e9" value="&lt;i&gt;nine.reverse-engineering.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.29&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:febe:640&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="630" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="b7e37c46-a38f-4aeb-bfde-85c3069941f6" value="&lt;i&gt;three.sandbox-escape.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.33&lt;/strong&gt;&lt;br&gt;fd50:52:183::33&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;:1025 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="840" width="260" height="200" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="8ddb6aec-1a4a-4934-9e9e-d70976121cee" value="&lt;i&gt;four.sandbox-escape.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.34&lt;/strong&gt;&lt;br&gt;fd50:52:183::34&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="1070" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="551a44c6-1236-4c55-86dd-dce73a26529d" value="&lt;i&gt;five.sandbox-escape.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.35&lt;/strong&gt;&lt;br&gt;fd50:52:183::35&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;:1025 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="1280" width="260" height="200" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="46e3700b-1c12-4768-a602-ecbcbfc94a79" value="&lt;i&gt;six.sandbox-escape.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.36&lt;/strong&gt;&lt;br&gt;fd50:52:183::36&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;:1025 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="290" y="1510" width="260" height="200" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="5acac73f-2ad5-4f21-966b-6c7028e6ff5a" value="&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.106&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe0d:8b72&lt;br&gt;&lt;br&gt;:22 - ssh&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(OpenSSH 9.2p1 Debian 2+deb12u1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="0" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="8cdfbf25-f8bb-4209-88d7-b3b61fd4e08f" value="&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.107&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:febd:1629&lt;br&gt;&lt;br&gt;:8080 - http-proxy&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="210" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="6d86b455-91be-47be-838e-15d974155be8" value="&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.111&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe42:dad3&lt;br&gt;&lt;br&gt;:80 - http&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(nginx 1.22.1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="420" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="42cb66e6-e4e3-46ee-ad70-43ea001a0214" value="&lt;i&gt;nextcloud.user.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.114&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe6d:b3f0&lt;br&gt;&lt;br&gt;:80 - http&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(Apache httpd 2.4.57)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="630" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="c703d88d-9774-4995-953f-2070c8a799db" value="&lt;i&gt;random-webserver.user.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.132&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe53:e291&lt;br&gt;&lt;br&gt;:80 - http&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(nginx 1.25.3)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="840" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="2610ee7c-1e9a-4e1e-a196-de1a1853eddb" value="&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.144&lt;/strong&gt;&lt;br&gt;&lt;br&gt;:139 - netbios-ssn&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(Microsoft Windows netbios-ssn )&lt;/span&gt;&lt;br&gt;:445 - microsoft-ds&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(Windows 7 Professional 7601 Service Pack 1 microsoft-ds )&lt;/span&gt;&lt;br&gt;:3389 - ms-wbt-server&lt;br&gt;:5985 - http&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(Microsoft HTTPAPI httpd 2.0)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: Microsoft Windows Phone 7.5 or 8.0 (96%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="1050" width="260" height="240" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="17aecaeb-53f6-475a-a543-ef8760259535" value="&lt;i&gt;jimmys-desktop.user.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.153&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:8d95:b253:cb26:de1e&lt;br&gt;&lt;br&gt;:3389 - ms-wbt-server&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="1320" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="bdf3f74b-d746-497d-987a-b8336203d809" value="&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.156&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe61:fecc&lt;br&gt;&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="580" y="1530" width="260" height="160" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="0cf2a7b0-1373-47b3-b822-87ffdaa09a02" value="&lt;i&gt;jukebox.user.scenario.cip.institute&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;strong style=&#34;font-size: 16px&#34;&gt;10.183.0.240&lt;/strong&gt;&lt;br&gt;fd50:52:183:0:200:ff:fe2c:d6c&lt;br&gt;&lt;br&gt;:80 - http&lt;br&gt;&lt;span style=&#34;color: #bbb&#34;&gt;(nginx 1.22.1)&lt;/span&gt;&lt;br&gt;&lt;br&gt;OS: HP P2000 G3 NAS device (93%)&lt;br&gt;Hops: 1&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="870" y="0" width="260" height="180" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="d0584f9d-7d51-4547-a2f2-94cbf7616272" value="Unidentified host:&lt;br&gt;&lt;br&gt;MAC: 62:D5:59:C9:09:D2&lt;br&gt;IPv6: fd50:52:183:0:60d5:59ff:fec9:9d2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="-700" y="0" width="260" height="100" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="c97a260d-745a-4af5-acc9-02e550d87a02" value="Unidentified host:&lt;br&gt;&lt;br&gt;MAC: 62:D5:59:C9:09:D2&lt;br&gt;IPv6: fd50:52:183:0:4817:adff:fec0:cce9" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2" parent="1" vertex="1">
+          <mxGeometry x="-700" y="130" width="260" height="100" as="geometry"></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

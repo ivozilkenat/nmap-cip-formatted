@@ -271,18 +271,11 @@ def print_hosts_by_fingerprints(host_fingerprint_dict):
         
         print(DELIMTER_BIG * DELIMITER_LENGTH)
 
-if __name__ == "__main__":
+def print_data_eval(filename_ipv4, filename_ipv6=None):
+    hosts_ipv4, postscript_out_ipv4 = get_hosts_from(filename_ipv4)
     
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--filenameIPv4', required=True)
-    parser.add_argument('--filenameIPv6', required=False)
-    
-    args = parser.parse_args()
-    
-    hosts_ipv4, postscript_out_ipv4 = get_hosts_from(args.filenameIPv4)
-    
-    if args.filenameIPv6 is not None:
-        hosts_ipv6, postscript_out_ipv6 = get_hosts_from(args.filenameIPv6)
+    if filename_ipv6 is not None:
+        hosts_ipv6, postscript_out_ipv6 = get_hosts_from(filename_ipv6)
         merged_hosts = merge_ipv4_ipv6(hosts_ipv4, hosts_ipv6)
     else:
         merged_hosts = hosts_ipv4
@@ -294,5 +287,15 @@ if __name__ == "__main__":
     
     print_postscript(postscript_out_ipv4)
     
-    if args.filenameIPv6 is not None:
+    if filename_ipv6 is not None:
         print_postscript(postscript_out_ipv6)
+
+if __name__ == "__main__":
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--filenameIPv4', required=True)
+    parser.add_argument('--filenameIPv6', required=False)
+    
+    args = parser.parse_args()
+    
+    print_data_eval(args.filenameIPv4, args.filenameIPv6)

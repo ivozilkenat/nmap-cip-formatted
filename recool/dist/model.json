@@ -1,0 +1,1501 @@
+{
+  "hosts": [
+    {
+      "ipv4": "10.183.0.1",
+      "ipv6": "fd50:52:183::1",
+      "mac": "BE:8E:B5:C8:F2:A0",
+      "hostname": "octopus.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4obAAN7tzFke5CEB3YDr+0CL5tHm6dLV+7clGSfVkCCQrDjsUM3+055i7DX815ba32hSdkDgpMvuug+KombaU=",
+              "fingerprint": "8ccd2f99f1145d0a9baa387de0c22268"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF/UfVg3zMDUJ0jhlzmW5YEIAz7Rq5iMZwdVJgg3mwP8",
+              "fingerprint": "2292d061d061266482f929214abb3a3a"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "domain",
+          "service_version": "dnsmasq 2.89"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 3.1 (95%)"
+    },
+    {
+      "ipv4": "10.183.0.2",
+      "ipv6": "fd50:52:183:0:200:ff:fef9:ec95",
+      "mac": "00:00:00:F9:EC:95",
+      "hostname": "flag-http-server.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.25.3"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.5",
+      "ipv6": "fd50:52:183::5",
+      "mac": "00:00:00:CE:8E:41",
+      "hostname": "packet-challenge.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGA3hSPsvNLc3ZTF9LdFXl/mg0i92pvCyHfnYao9hTQwFm4w3U9CV8fGapQkinOVQMtB9Hg6Pllv+74DN4m+u2w=",
+              "fingerprint": "c8b0033a5122abe63ab2c1df83df4c12"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIOS6f5ioKXMbcgnqHh2cD2y4sHGLPNX0KLBZtlgG4fy8",
+              "fingerprint": "a41c90e600ea2986377b9810896f82d1"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 6666,
+          "service_name": "irc",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.20",
+      "ipv6": "fd50:52:183:0:200:ff:fe72:fc48",
+      "mac": "00:00:00:72:FC:48",
+      "hostname": "zero.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPWByZLiNwTlZb9IPg5+43XGSwkAg44TH6HVXEzblAq9+QNIlAXljfozqs98KyXdOBbvu4hzoeIXUzboMPpiKd8=",
+              "fingerprint": "c008b4df2150b784e50a8da8e9fdfdac"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIH+Z4beBPkrHdxFnEdnIoOeHSSU9MEK2WPN3LFEbnmCe",
+              "fingerprint": "4b5de2d767e9f6c1103fa812428df6bf"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.21",
+      "ipv6": "fd50:52:183:0:200:ff:fe30:dc86",
+      "mac": "00:00:00:30:DC:86",
+      "hostname": "one.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM5DwxJId+/OsHRRZAKAQ4kGoSZGYO2a3/t5k9c9jHDu2z5Gq8L5e97YqCvMC9wRkCmmqrTRzRT95clEwsLlfVI=",
+              "fingerprint": "24ad003bb92314ed71e6e59751ef24ee"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKa1LWZwCV3DXR0BJQ9a/+aei6QaNVgOkCi4Tu8qbLfg",
+              "fingerprint": "7d350e775fd520e2eee55e56d9b8b3e9"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.0.22",
+      "ipv6": "fd50:52:183:0:200:ff:fe34:544b",
+      "mac": "00:00:00:34:54:4B",
+      "hostname": "two.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM5DwxJId+/OsHRRZAKAQ4kGoSZGYO2a3/t5k9c9jHDu2z5Gq8L5e97YqCvMC9wRkCmmqrTRzRT95clEwsLlfVI=",
+              "fingerprint": "24ad003bb92314ed71e6e59751ef24ee"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKa1LWZwCV3DXR0BJQ9a/+aei6QaNVgOkCi4Tu8qbLfg",
+              "fingerprint": "7d350e775fd520e2eee55e56d9b8b3e9"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.0.23",
+      "ipv6": "fd50:52:183:0:200:ff:feb4:3cae",
+      "mac": "00:00:00:B4:3C:AE",
+      "hostname": "three.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCa/PAu/8iVzS+zb+nhQwlxdbb9daopTo9y8Moonp+YT9e0mIapnmkjBkQL3lKkPBP09MbzAgj39sTIdhzgUu2M=",
+              "fingerprint": "0704e54d4b53dd025f391defc56e4d9a"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAINpPRMdY5V3ipEqBNjpOFjO8mcHBv7loqXTF7wL7jhWW",
+              "fingerprint": "136b2c8a4730a35bfa24304919934cdb"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.0.24",
+      "ipv6": "fd50:52:183:0:200:ff:feed:4928",
+      "mac": "00:00:00:ED:49:28",
+      "hostname": "four.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM5DwxJId+/OsHRRZAKAQ4kGoSZGYO2a3/t5k9c9jHDu2z5Gq8L5e97YqCvMC9wRkCmmqrTRzRT95clEwsLlfVI=",
+              "fingerprint": "24ad003bb92314ed71e6e59751ef24ee"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKa1LWZwCV3DXR0BJQ9a/+aei6QaNVgOkCi4Tu8qbLfg",
+              "fingerprint": "7d350e775fd520e2eee55e56d9b8b3e9"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.0.25",
+      "ipv6": "fd50:52:183:0:200:ff:fe8b:1209",
+      "mac": "00:00:00:8B:12:09",
+      "hostname": "five.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM5DwxJId+/OsHRRZAKAQ4kGoSZGYO2a3/t5k9c9jHDu2z5Gq8L5e97YqCvMC9wRkCmmqrTRzRT95clEwsLlfVI=",
+              "fingerprint": "24ad003bb92314ed71e6e59751ef24ee"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKa1LWZwCV3DXR0BJQ9a/+aei6QaNVgOkCi4Tu8qbLfg",
+              "fingerprint": "7d350e775fd520e2eee55e56d9b8b3e9"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.0.26",
+      "ipv6": "fd50:52:183:0:200:ff:fe1c:34e5",
+      "mac": "00:00:00:1C:34:E5",
+      "hostname": "six.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOdfcvQfJ068Xh7TW6fziW8xXFJhICzTMrhaLE4TmP3XT93RC10JyG7MgMQqKRGwLXzDOr1CRZ7Uc17CGSdWOZc=",
+              "fingerprint": "ae2f194a7b0312f7012b7388bd0ad7ae"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAILOfSnTfE/44EdnFAX1KQUiXd4aMxT9w+btyr9xfZmim",
+              "fingerprint": "ebe2bb6005cdd11d1951d94ff243e57c"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.27",
+      "ipv6": "fd50:52:183:0:200:ff:fe5b:7140",
+      "mac": "00:00:00:5B:71:40",
+      "hostname": "seven.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBANjOOYK+5lkqlSdfh/6dvOixLtXYqrCgZzBCXL3VCfH10vkTzF8la9w9M+uTDC5rPPMdDoWW+uZnRKO37hOULs=",
+              "fingerprint": "bd41fccc7d4751fba9aec905b9e9454d"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIM/mylGCddBEh2PbE9oB32G0TBn0XeHEaXFqImeiudB8",
+              "fingerprint": "afa3042853b0dccb6592b8825b4b9bca"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.29",
+      "ipv6": "fd50:52:183:0:200:ff:febe:640",
+      "mac": "00:00:00:BE:06:40",
+      "hostname": "nine.reverse-engineering.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPWByZLiNwTlZb9IPg5+43XGSwkAg44TH6HVXEzblAq9+QNIlAXljfozqs98KyXdOBbvu4hzoeIXUzboMPpiKd8=",
+              "fingerprint": "c008b4df2150b784e50a8da8e9fdfdac"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIH+Z4beBPkrHdxFnEdnIoOeHSSU9MEK2WPN3LFEbnmCe",
+              "fingerprint": "4b5de2d767e9f6c1103fa812428df6bf"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.33",
+      "ipv6": "fd50:52:183::33",
+      "mac": "00:00:00:70:1C:96",
+      "hostname": "three.sandbox-escape.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNtnrjuwNBN9xX/PvMkYMpnyZdpbGYNM7D5bOT3EL9LLje3um50ngyqxdQwIVqCPk+/HDOYigSf0ipzAeDBi1qQ=",
+              "fingerprint": "66f966d8cada07bfee00d480c2969402"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAINbgRYqVxBOt6uuIWpF3P7CpgEDMw2giEg7vYtp0lOau",
+              "fingerprint": "0901e99a2da152142897497e3ff255c1"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 1025,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJD8TgZ94Re6CF43aOc/D+Yyn5RXtQWtgI6F+uN/3yvpdn5SRp8Zk5Dn2LvbWrzhNJli+P8ZqngsDEJNn895f6Y=",
+              "fingerprint": "43b679fcb42a04d05d7a7de96c1a8871"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIPfr3G5E0FkaPB6HPxG4waF/LPa9uVqMe+Q0Ph7vaHPB",
+              "fingerprint": "c6daca73eb036e3614dff5ea674f724a"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.34",
+      "ipv6": "fd50:52:183::34",
+      "mac": "00:00:00:88:2D:79",
+      "hostname": "four.sandbox-escape.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKcraqUn90wjcp2O3R8H/duCFYBNpzUtrd2pkyQFlU2ozGGVdf971ObEh2uePghHfJ7Ftnc6BYVOgqPYcu5v33w=",
+              "fingerprint": "585367a3e586baa6e97e25558edcae66"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIK6xrQH65WTSpVDn8z1TSp5+DHU9ok5PBYsgNfWTCiA4",
+              "fingerprint": "1d1a644b8ea83e928ac414db6c4f34ac"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.35",
+      "ipv6": "fd50:52:183::35",
+      "mac": "00:00:00:56:68:96",
+      "hostname": "five.sandbox-escape.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLmPXrM2ZSLIyPtUB/bXxCQomqSvkGnhbsW8u4nvJ47+uVziA92N7NBdvwtBqQbpi9LB0WRn8138cT76cfnW/U8=",
+              "fingerprint": "a4f96c8d10b4c79bf86cb91299996a83"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAINRMP1ssmH5SwtKWqQtLWEO/FBzOdbRpOXIH9c/5M1IF",
+              "fingerprint": "c72e9ed9929bbafede8c596e36576116"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 1025,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPm7vuHJ9sKMr/OcG6ul85mtNRHItOU267cRipB1SjpO/1qi4jh5pcdGKCEg3EqbZAt/bjzdppPgMivzynh3YyE=",
+              "fingerprint": "1285bf9fe7ec1acd2093bb754c64a587"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIG+EKzSqNvSSe2W4cDeDX7G8T04lb+1fWRpZcRlVu6+y",
+              "fingerprint": "c748ef32420474446ea8e006fccdce5b"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.36",
+      "ipv6": "fd50:52:183::36",
+      "mac": "00:00:00:02:26:26",
+      "hostname": "six.sandbox-escape.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM6asyWQGq6ElMHkJUjuiczChM9l7fEIsNp5NEmdLpjLC9JMvcfVSnnEyJIgdBy4zXeSKd9e185LNR2SLIupAKs=",
+              "fingerprint": "7130a9501b367441cc4f52b5c3e54173"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAICRanN6rpvo2iplR8uj9CjB4bTXli2ZnLkSNYFqJi9Ww",
+              "fingerprint": "ff0a9287e43489d8956bf0e799800015"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 1025,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOBUrYzLEkgF5+YTctdk6AQWcPFk1QjKgLRLSDoh24YDsOmVQbd70dGF1IHYbULFszVhhgjL7r5n8n2mGU6OBGo=",
+              "fingerprint": "2d7bef3e84645556991f171dad11ea27"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIOYJpOCl8mTiTEhyL7vKt0Bkv/RFDihLiiHqoCGF3xAu",
+              "fingerprint": "0ad9ade5bcba684d6fa5f94665b30b2d"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.106",
+      "ipv6": "fd50:52:183:0:200:ff:fe0d:8b72",
+      "mac": "00:00:00:0D:8B:72",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHvpPAhpO5vjtgoSsp84nv8UpG713fCIt6qqn2Uz0mCN8dj1qQIjJJe+BPvoHRf1/XHUNPu3jmQotvNKxYafauc=",
+              "fingerprint": "188a4f181e4b86ed3b597790474e6df4"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKI0yMB3RMEkVe4a5E2VxDy040uFL7Luv3AvNhiRnssL",
+              "fingerprint": "93f677bf21694200d31ec899196c4232"
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.107",
+      "ipv6": "fd50:52:183:0:200:ff:febd:1629",
+      "mac": "00:00:00:BD:16:29",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 8080,
+          "service_name": "http-proxy",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.111",
+      "ipv6": "fd50:52:183:0:200:ff:fe42:dad3",
+      "mac": "00:00:00:42:DA:D3",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.22.1"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.114",
+      "ipv6": "fd50:52:183:0:200:ff:fe6d:b3f0",
+      "mac": "00:00:00:6D:B3:F0",
+      "hostname": "nextcloud.user.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "Apache httpd 2.4.57"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.132",
+      "ipv6": "fd50:52:183:0:200:ff:fe53:e291",
+      "mac": "00:00:00:53:E2:91",
+      "hostname": "random-webserver.user.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.25.3",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.144",
+      "ipv6": "",
+      "mac": "00:00:00:C4:C2:DF",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 139,
+          "service_name": "netbios-ssn",
+          "service_version": "Microsoft Windows netbios-ssn "
+        },
+        {
+          "protocol": "tcp",
+          "number": 445,
+          "service_name": "microsoft-ds",
+          "service_version": "Windows 7 Professional 7601 Service Pack 1 microsoft-ds "
+        },
+        {
+          "protocol": "tcp",
+          "number": 3389,
+          "service_name": "ms-wbt-server",
+          "service_version": "",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 5985,
+          "service_name": "http",
+          "service_version": "Microsoft HTTPAPI httpd 2.0"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Microsoft Windows Phone 7.5 or 8.0 (96%)"
+    },
+    {
+      "ipv4": "10.183.0.153",
+      "ipv6": "fd50:52:183:0:8d95:b253:cb26:de1e",
+      "mac": "00:00:00:E8:86:FD",
+      "hostname": "jimmys-desktop.user.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 3389,
+          "service_name": "ms-wbt-server",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.0.156",
+      "ipv6": "fd50:52:183:0:200:ff:fe61:fecc",
+      "mac": "00:00:00:61:FE:CC",
+      "hostname": "",
+      "ports": null,
+      "hop_distance": 1
+    },
+    {
+      "ipv4": "10.183.0.240",
+      "ipv6": "fd50:52:183:0:200:ff:fe2c:d6c",
+      "mac": "00:00:00:2C:0D:6C",
+      "hostname": "jukebox.user.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.22.1"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.1.1",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4obAAN7tzFke5CEB3YDr+0CL5tHm6dLV+7clGSfVkCCQrDjsUM3+055i7DX815ba32hSdkDgpMvuug+KombaU=",
+              "fingerprint": "8ccd2f99f1145d0a9baa387de0c22268"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF/UfVg3zMDUJ0jhlzmW5YEIAz7Rq5iMZwdVJgg3mwP8",
+              "fingerprint": "2292d061d061266482f929214abb3a3a"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "tcpwrapped",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 3.1 (95%)"
+    },
+    {
+      "ipv4": "10.183.3.1",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4obAAN7tzFke5CEB3YDr+0CL5tHm6dLV+7clGSfVkCCQrDjsUM3+055i7DX815ba32hSdkDgpMvuug+KombaU=",
+              "fingerprint": "8ccd2f99f1145d0a9baa387de0c22268"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF/UfVg3zMDUJ0jhlzmW5YEIAz7Rq5iMZwdVJgg3mwP8",
+              "fingerprint": "2292d061d061266482f929214abb3a3a"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "domain",
+          "service_version": "dnsmasq 2.89"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 3.1 (95%)"
+    },
+    {
+      "ipv4": "10.183.43.1",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4obAAN7tzFke5CEB3YDr+0CL5tHm6dLV+7clGSfVkCCQrDjsUM3+055i7DX815ba32hSdkDgpMvuug+KombaU=",
+              "fingerprint": "8ccd2f99f1145d0a9baa387de0c22268"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF/UfVg3zMDUJ0jhlzmW5YEIAz7Rq5iMZwdVJgg3mwP8",
+              "fingerprint": "2292d061d061266482f929214abb3a3a"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "tcpwrapped",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 3.1 (91%)"
+    },
+    {
+      "ipv4": "10.183.137.1",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4obAAN7tzFke5CEB3YDr+0CL5tHm6dLV+7clGSfVkCCQrDjsUM3+055i7DX815ba32hSdkDgpMvuug+KombaU=",
+              "fingerprint": "8ccd2f99f1145d0a9baa387de0c22268"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF/UfVg3zMDUJ0jhlzmW5YEIAz7Rq5iMZwdVJgg3mwP8",
+              "fingerprint": "2292d061d061266482f929214abb3a3a"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "domain",
+          "service_version": "dnsmasq 2.89"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 3.1 (91%)"
+    },
+    {
+      "ipv4": "10.183.162.1",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL4obAAN7tzFke5CEB3YDr+0CL5tHm6dLV+7clGSfVkCCQrDjsUM3+055i7DX815ba32hSdkDgpMvuug+KombaU=",
+              "fingerprint": "8ccd2f99f1145d0a9baa387de0c22268"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF/UfVg3zMDUJ0jhlzmW5YEIAz7Rq5iMZwdVJgg3mwP8",
+              "fingerprint": "2292d061d061266482f929214abb3a3a"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "domain",
+          "service_version": "dnsmasq 2.89"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 3.1 (91%)"
+    },
+    {
+      "ipv4": "10.183.1.125",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "mc.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIwG6qx+kRmgKgUtiHvQK+htw7lFKt4E28vtM8QMy4zSvJouxKCp6jwi3PNjf/LFUMTbDA6x3tq7XLSs54X5ciQ=",
+              "fingerprint": "b98985e149c9e028493a6b2aeabb9e5d"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIO5C8RZvtKH4fU1XgH5w0sMSedsO1HOJO3SMyvPGHLh1",
+              "fingerprint": "4a0be06472fe5a0b846a558e8a823b3f"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 25565,
+          "service_name": "minecraft",
+          "service_version": "Minecraft 1.16.5"
+        }
+      ],
+      "hop_distance": 1,
+      "os": "Linux 5.0 - 5.4 (100%)"
+    },
+    {
+      "ipv4": "10.183.3.30",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "website.docker.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDXdQMatNfXP77UNpSROeUh4jn0tNhwHhEK55uNxu1rxLnS4zE3TeUzaA0G+vxFFA71zsFLgq3Uu0njRRIqTujg=",
+              "fingerprint": "36218efcdc4b5bc2d53c2827de88138d"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIK3toUe0ZfkNBvcXcI6aMIPhW2gU+5Hs5buAbSLmrLJx",
+              "fingerprint": "cb370f24deaab404d96f6f41cb5cb042"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "Apache httpd 2.4.58",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.3.31",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "registry.docker.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 5000,
+          "service_name": "http",
+          "service_version": "Docker Registry "
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.3.32",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "website-judge.docker.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.18.0"
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.137.50",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "gitlab.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 8.9p1 Ubuntu 3ubuntu0.4",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIJnrxsOpCKypV78xkZrd17UFaMPnmo874pmwHHXdi/zA4Iq4tAHL2FoBNNoMxG7UbOOMAbHIP8UyYMdZLi4NIM=",
+              "fingerprint": "30f168b6e7bc41301ac737ff602d1891"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIL+CQE3j/wNBkgUmBT9YObcSvTVkg+sYihKsGIAx7CGV",
+              "fingerprint": "1e92e2243ead4b3ca6e0498381fe8a70"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx "
+        },
+        {
+          "protocol": "tcp",
+          "number": 8060,
+          "service_name": "http",
+          "service_version": "nginx 1.24.0"
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.162.22",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.22.1"
+        }
+      ],
+      "hop_distance": 2,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.162.31",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 65012,
+          "service_name": "unknown",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.162.45",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx "
+        },
+        {
+          "protocol": "tcp",
+          "number": 443,
+          "service_name": "http",
+          "service_version": "nginx ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.162.137",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx 1.22.1"
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    },
+    {
+      "ipv4": "10.183.162.152",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 3000,
+          "service_name": "http",
+          "service_version": "nginx 1.18.0"
+        },
+        {
+          "protocol": "tcp",
+          "number": 3001,
+          "service_name": "http",
+          "service_version": "nginx 1.18.0",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 6900,
+          "service_name": "http",
+          "service_version": "Node.js "
+        },
+        {
+          "protocol": "tcp",
+          "number": 6901,
+          "service_name": "jetstream",
+          "service_version": ""
+        }
+      ],
+      "hop_distance": 2,
+      "os": "Linux 2.6.32 (94%)"
+    },
+    {
+      "ipv4": "10.183.162.167",
+      "ipv6": "",
+      "mac": "",
+      "hostname": "mail.scenario.cip.institute",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "number": 22,
+          "service_name": "ssh",
+          "service_version": "OpenSSH 9.2p1 Debian 2+deb12u1",
+          "host_keys": [
+            {
+              "type": "ecdsa-sha2-nistp256",
+              "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJkEUxVk+Fz0INsF9b1ObL1qAHfz8j0oFEqsVB1EiphBtuCxdfV6YYsUJ2nClPIhXhftSYEjYLQOlo1hOMMT8xc=",
+              "fingerprint": "3bf40b201923cbdbec40949d655431d3"
+            },
+            {
+              "type": "ssh-ed25519",
+              "key": "AAAAC3NzaC1lZDI1NTE5AAAAIE4Exh9WCGh3opPKPtx67qq6QWH4w+p5pIJQlSelJWTN",
+              "fingerprint": "51d842dee45bb2a63ab59786c7b7f199"
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 25,
+          "service_name": "smtp",
+          "service_version": "Postfix smtpd ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 53,
+          "service_name": "tcpwrapped",
+          "service_version": ""
+        },
+        {
+          "protocol": "tcp",
+          "number": 80,
+          "service_name": "http",
+          "service_version": "nginx "
+        },
+        {
+          "protocol": "tcp",
+          "number": 110,
+          "service_name": "pop3",
+          "service_version": "Dovecot pop3d ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 143,
+          "service_name": "imap",
+          "service_version": "Dovecot imapd ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 443,
+          "service_name": "http",
+          "service_version": "nginx ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 465,
+          "service_name": "smtp",
+          "service_version": "Postfix smtpd ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 587,
+          "service_name": "smtp",
+          "service_version": "Postfix smtpd ",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 993,
+          "service_name": "imaps",
+          "service_version": "",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 995,
+          "service_name": "pop3s",
+          "service_version": "",
+          "host_keys": [
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "rsa",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            },
+            {
+              "type": "",
+              "key": "",
+              "fingerprint": ""
+            }
+          ]
+        },
+        {
+          "protocol": "tcp",
+          "number": 4190,
+          "service_name": "sieve",
+          "service_version": "Dovecot Pigeonhole sieve 1.0"
+        }
+      ],
+      "hop_distance": 2,
+      "os": "HP P2000 G3 NAS device (93%)"
+    }
+  ],
+  "unidentified_hosts": [
+    {
+      "ipv6": "fd50:52:183:0:60d5:59ff:fec9:9d2",
+      "mac": "62:D5:59:C9:09:D2"
+    },
+    {
+      "ipv6": "fd50:52:183:0:4817:adff:fec0:cce9",
+      "mac": "62:D5:59:C9:09:D2"
+    }
+  ]
+}

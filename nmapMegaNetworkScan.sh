@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Scan outside of local network (in scenario </64) does not use NDP, therefore very slow automatically. Manual usage advised
+# Scan outside of local network (in scenario </64) does not use NDP, therefore very slow automatically. Manual usage advise
 
 TARGET_NETWORK_IPv4=$1
 TARGET_NETWORK_IPv6=$2

@@ -1,0 +1,89 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-12-18 12:46 EST
+Nmap scan report for mail.scenario.cip.institute (10.183.162.167)
+Host is up (0.0091s latency).
+Not shown: 65523 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 9.2p1 Debian 2+deb12u1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 3b:f4:0b:20:19:23:cb:db:ec:40:94:9d:65:54:31:d3 (ECDSA)
+|_  256 51:d8:42:de:e4:5b:b2:a6:3a:b5:97:86:c7:b7:f1:99 (ED25519)
+25/tcp   open  smtp       Postfix smtpd
+|_smtp-commands: mail.scenario.cip.institute, PIPELINING, SIZE 104857600, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, CHUNKING
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+53/tcp   open  tcpwrapped
+80/tcp   open  http       nginx
+|_http-title: mailcow UI
+| http-robots.txt: 1 disallowed entry 
+|_/
+110/tcp  open  pop3       Dovecot pop3d
+|_pop3-capabilities: SASL RESP-CODES AUTH-RESP-CODE STLS TOP PIPELINING CAPA UIDL
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+143/tcp  open  imap       Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: SASL-IR capabilities STARTTLS Pre-login ENABLE have listed post-login more ID LOGIN-REFERRALS LOGINDISABLEDA0001 OK IMAP4rev1 IDLE LITERAL+
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+443/tcp  open  ssl/http   nginx
+|_http-title: mailcow UI
+| http-robots.txt: 1 disallowed entry 
+|_/
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+|_ssl-date: TLS randomness does not represent time
+465/tcp  open  ssl/smtp   Postfix smtpd
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+|_ssl-date: TLS randomness does not represent time
+|_smtp-commands: mail.scenario.cip.institute, PIPELINING, SIZE 104857600, ETRN, AUTH PLAIN LOGIN, AUTH=PLAIN LOGIN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, CHUNKING
+587/tcp  open  smtp       Postfix smtpd
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+|_smtp-commands: mail.scenario.cip.institute, PIPELINING, SIZE 104857600, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, CHUNKING
+|_ssl-date: TLS randomness does not represent time
+993/tcp  open  imaps?
+|_imap-capabilities: AUTH=LOGINA0001 capabilities LITERAL+ Pre-login ENABLE have listed post-login more ID SASL-IR LOGIN-REFERRALS OK IMAP4rev1 IDLE AUTH=PLAIN
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valid after:  2024-11-29T09:11:54
+995/tcp  open  pop3s?
+|_ssl-date: TLS randomness does not represent time
+|_pop3-capabilities: USER RESP-CODES AUTH-RESP-CODE SASL(PLAIN LOGIN) TOP PIPELINING CAPA UIDL
+| ssl-cert: Subject: commonName=mail.scenario.cip.institute/organizationName=mailcow/stateOrProvinceName=NRW/countryName=DE
+| Not valid before: 2023-11-30T09:11:54
+|_Not valNmap done: 65536 IP addresses (45 hosts up) scanned in 4413.16 seconds
+hole sieve 1.0
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=12/18%OT=22%CT=1%CU=39436%PV=Y%DS=2%DC=T%G=Y%TM=658
+OS:085B9%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A
+OS:)SEQ(SP=102%GCD=1%ISR=10A%TI=Z%CI=Z%TS=A)SEQ(SP=102%GCD=1%ISR=10B%TI=Z%C
+OS:I=Z%II=I%TS=A)SEQ(SP=103%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M550ST
+OS:11NW7%O2=M550ST11NW7%O3=M550NNT11NW7%O4=M550ST11NW7%O5=M550ST11NW7%O6=M5
+OS:50ST11)WIN(W1=FCC0%W2=FCC0%W3=FCC0%W4=FCC0%W5=FCC0%W6=FCC0)ECN(R=Y%DF=Y%
+OS:T=40%W=FF00%O=M550NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)
+OS:T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=
+OS:40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0
+OS:%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD
+OS:=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT     ADDRESS
+1   ...
+2   7.52 ms mail.scenario.cip.institute (10.183.162.167)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 55.33 seconds
