@@ -39,30 +39,29 @@ def possible_router_addresses(ip, nmask):
         
     return addresses
 
-def scan_network(ip, nmask, output_file_name="namp-out"):
+def scan_network(ip, nmask, output_file_name="namp-out.xml"):
     # command = f'sudo nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS {to_CIDR(ip, nmask)}'
-    print(to_CIDR(ip, nmask))
-    command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS 10.183.0.1'
+    command = f'sudo nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS 10.183.0.1'
     result = subprocess.run(
         command, text=True, shell=True, stderr=subprocess.PIPE
     )
     check_rcode(result.returncode, result.stderr)
 
-def scan_network_file(filename, output_file_name="file-nmap-out"):
+def scan_network_file(filename, output_file_name="file-nmap-out.xml"):
     command = f'sudo nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS -iL {filename}'
     result = subprocess.run(
         command, text=True, shell=True, stderr=subprocess.PIPE
     )
     check_rcode(result.returncode, result.stderr)
 
-def scan6_local(interface, output_file_name="scan6-out"):
+def scan6_local(interface, output_file_name="scan6-out.txt"):
     command = f'scan6 -i {interface} -L > {output_file_name}'
     result = subprocess.run(
         command, text=True, shell=True, stderr=subprocess.PIPE
     )
     check_rcode(result.returncode, result.stderr)
 
-def scan_for_routers(ip, nmask, output_file_name="nmap-router-out"):
+def scan_for_routers(ip, nmask, output_file_name="nmap-router-out.txt"):
     tmp_file_name = "possible_router_ips.txt"
     possible_addresses = possible_router_addresses(ip, nmask)
     addresses = list()
