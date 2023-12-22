@@ -71,7 +71,7 @@ def scan_for_routers(ip, nmask, output_file_name="nmap-router-out.txt"):
     
     scan_network_file(tmp_file_name, output_file_name)
     
-    tree = ET.parse(tmp_file_name)
+    tree = ET.parse(output_file_name)
     root = tree.getroot()
     
     for host in root.findall("host"):
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     
     # eval data
     scan_evaluation(
-        DATA_EVAL_FILE_BASE.format("local-ipv4"), 
+        DATA_EVAL_FILE_BASE.format("local-ipv4-ipv6"), 
         nmap_out_file_name_ipv4, 
         nmap_out_file_name_ipv6
     )
