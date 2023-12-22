@@ -40,8 +40,8 @@ def possible_router_addresses(ip, nmask):
     return addresses
 
 def scan_network(ip, nmask, output_file_name="namp-out.xml"):
-    # command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS {to_CIDR(ip, nmask)}'
-    command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS 10.183.0.1'
+    command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS {to_CIDR(ip, nmask)}'
+    #command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS 10.183.0.1'
     result = subprocess.run(
         command, text=True, shell=True, stderr=subprocess.PIPE
     )
