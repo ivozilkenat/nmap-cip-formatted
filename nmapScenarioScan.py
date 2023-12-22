@@ -42,21 +42,21 @@ def possible_router_addresses(ip, nmask):
 def scan_network(ip, nmask, output_file_name="namp-out"):
     command = f'sudo nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS {to_CIDR(ip, nmask)}'
     result = subprocess.run(
-        command, text=True, shell=True
+        command, text=True, shell=True, stderr=subprocess.PIPE
     )
     check_rcode(result.returncode, result.stderr)
 
 def scan_network_file(filename, output_file_name="file-nmap-out"):
     command = f'sudo nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS -iL {filename}'
     result = subprocess.run(
-        command, text=True, shell=True
+        command, text=True, shell=True, stderr=subprocess.PIPE
     )
     check_rcode(result.returncode, result.stderr)
 
 def scan6_local(interface, output_file_name="scan6-out"):
     command = f'scan6 -i {interface} -L > {output_file_name}'
     result = subprocess.run(
-        command, text=True, shell=True
+        command, text=True, shell=True, stderr=subprocess.PIPE
     )
     check_rcode(result.returncode, result.stderr)
 
