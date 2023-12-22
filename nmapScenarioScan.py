@@ -41,6 +41,7 @@ def possible_router_addresses(ip, nmask):
 
 def scan_network(ip, nmask, output_file_name="namp-out"):
     # command = f'sudo nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS {to_CIDR(ip, nmask)}'
+    print(to_CIDR(ip, nmask))
     command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS 10.183.0.1'
     result = subprocess.run(
         command, text=True, shell=True, stderr=subprocess.PIPE
@@ -118,6 +119,7 @@ if __name__ == "__main__":
     scan_network(ip, local_prefix_len, NMAP_OUT_FILE_BASE.format("local-ipv4")) # TEST
     # scan ipv 6    
     scan6_local(args.interface, SCAN6_OUT_FILE_BASE)
+    scan_network_file(SCAN6_OUT_FILE_BASE, nmap_out_file_name_ipv6)
     
     # eval data
     scan_evaluation(
