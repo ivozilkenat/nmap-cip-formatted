@@ -114,10 +114,14 @@ if __name__ == "__main__":
     
     nmap_out_file_name_ipv4 = NMAP_OUT_FILE_BASE.format("local-ipv4")
     nmap_out_file_name_ipv6 = NMAP_OUT_FILE_BASE.format("local-ipv6")
+    print_format = "[>>> {} <<<]"
     
+    print(print_format.format("SCANNING IPv4 - local"))
     scan_network(ip, local_prefix_len, NMAP_OUT_FILE_BASE.format("local-ipv4")) # TEST
     # scan ipv 6    
+    print(print_format.format("DISCOVERING IPv6 - local"))
     scan6_local(args.interface, SCAN6_OUT_FILE_BASE)
+    print(print_format.format("SCANNING IPv6 - local"))
     scan_network_file(SCAN6_OUT_FILE_BASE, nmap_out_file_name_ipv6)
     
     # eval data
@@ -128,11 +132,13 @@ if __name__ == "__main__":
     )
     
     # check for different networks
+    print(print_format.format("SCANNING ROUTERS"))
     router_ips = scan_for_routers(ip, ROUTER_PREFIX_GUESS) # TEST
     for r_ip in router_ips:
         if r_ip == ip:
             continue
         nmap_out_file_name = NMAP_OUT_FILE_BASE.format(ip)
+        print(print_format.format("SCANNING IPv4 - {r_ip}"))
         scan_network(r_ip, ROUTER_PREFIX_GUESS, nmap_out_file_name)
         
         # eval data here
