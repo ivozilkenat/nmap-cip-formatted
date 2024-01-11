@@ -112,9 +112,10 @@ if __name__ == "__main__":
     ROUTER_PREFIX_GUESS = 16 
     assert ROUTER_PREFIX_GUESS % 8 == 0
     
-    NMAP_OUT_FILE_BASE = "nmap-out-{}.xml"
-    DATA_EVAL_FILE_BASE = "nmap-eval-{}.txt"
-    SCAN6_OUT_FILE_BASE = "scan6-out.txt"
+    OUT_DIR = "out"
+    NMAP_OUT_FILE_BASE = os.path.join(OUT_DIR, "nmap-out-{}.xml")
+    DATA_EVAL_FILE_BASE = os.path.join(OUT_DIR, "nmap-eval-{}.txt")
+    SCAN6_OUT_FILE_BASE = os.path.join(OUT_DIR, "scan6-out.txt")
     
     parser = argparse.ArgumentParser()
     parser.add_argument("interface")
