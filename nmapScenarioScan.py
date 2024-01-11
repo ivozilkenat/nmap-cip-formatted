@@ -122,6 +122,10 @@ if __name__ == "__main__":
     
     
     args = parser.parse_args()
+    
+    if not os.path.isdir(OUT_DIR):
+        os.mkdir(OUT_DIR)
+    
     # scan local ip v4
     ip, local_prefix_len = get_ip_and_prefix(args.interface)
     
