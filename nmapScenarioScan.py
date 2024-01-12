@@ -1,6 +1,7 @@
 #!/bin/python
 
 # THIS SCRIPT IS AN ABOMINATION IN TERMS OF SOFTWARE DESIGN AND WAS CREATED UNDER IMMENSE TIME PRESSURE
+# /out MIGHT CONTAIN UNFINISHED SCANS IF PREMATURELY TERMINATED
 
 import subprocess
 import argparse
@@ -33,6 +34,21 @@ def to_CIDR(ip, netmask):
     interface = ipaddress.IPv4Interface(f"{ip}/{netmask}")
     # Return the CIDR notation
     return interface
+
+def ips_in_same_subnet(ip1, ip2, prefix_length):
+    try:
+        # Convert IP addresses to binary format
+        bin_ip1 = int(ipaddress.IPv4Address(ip1))
+        bin_ip2 = int(ipaddress.IPv4Address(ip2))
+
+        # Create a mask for the network part based on prefix length
+        mask = (1 << 32) - (1 << (32 - prefix_length))
+
+        # Compare the network part of both IPs
+        return (bin_ip1 & mask) == (bin_ip2 & mask)
+    except ValueError:
+        # Handle invalid IP addresses
+        return False
 
 def get_ip_and_prefix(ifname):
     addrs = ni.ifaddresses(ifname)
@@ -168,7 +184,7 @@ if __name__ == "__main__":
     )
     router_ips = get_router_ips(nmap_out_file_name_routers)
     for r_ip in router_ips:
-        if r_ip == ip: # TODO: actually check if subnet is same
+        if ips_in_same_subnet(r_ip, ip):
             continue
         nmap_out_file_name = NMAP_OUT_FILE_BASE.format(r_ip)
         print(print_format.format(f"SCANNING IPv4 - {r_ip}"))
