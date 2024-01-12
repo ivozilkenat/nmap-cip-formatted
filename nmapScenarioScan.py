@@ -74,17 +74,18 @@ def scan6_local(interface, output_file_name="scan6-out.txt"):
     check_rcode(result.returncode, result.stderr)
 
 def scan_for_routers(ip, nmask, output_file_name="nmap-router-out.txt"):
-    tmp_file_name = "possible_router_ips.txt"
+    tmp_file_name = "./tmp/possible_router_ips.txt"
     possible_addresses = possible_router_addresses(ip, nmask)
-    addresses = list()
     
     with open(tmp_file_name, "w") as f:
         f.writelines([a + "\n" for a in possible_addresses])
     
     scan_network_file(tmp_file_name, output_file_name)
     
-    tree = ET.parse(output_file_name)
+def get_router_ips(nmap_xml_file):
+    tree = ET.parse(nmap_xml_file)
     root = tree.getroot()
+    addresses = list()
     
     for host in root.findall("host"):
     
@@ -157,7 +158,11 @@ if __name__ == "__main__":
     
     # check for different networks
     print(print_format.format("SCANNING ROUTERS"))
-    router_ips = scan_for_routers(ip, ROUTER_PREFIX_GUESS) # TEST
+    nmap_out_file_name_routers = os.path.join(OUT_DIR, "nmap-router-out.txt")
+    run_if_file_not_existing(nmap_out_file_name_routers)(scan_for_routers)(
+        ip, ROUTER_PREFIX_GUESS, nmap_out_file_name_routers
+    )
+    router_ips = get_router_ips(nmap_out_file_name_routers)
     for r_ip in router_ips:
         if r_ip == ip:
             continue
