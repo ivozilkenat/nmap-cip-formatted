@@ -74,7 +74,7 @@ def scan6_local(interface, output_file_name="scan6-out.txt"):
     check_rcode(result.returncode, result.stderr)
 
 def scan_for_routers(ip, nmask, output_file_name="nmap-router-out.txt"):
-    tmp_file_name = "./tmp/possible_router_ips.txt"
+    tmp_file_name = "possible_router_ips.txt"
     possible_addresses = possible_router_addresses(ip, nmask)
     
     with open(tmp_file_name, "w") as f:
