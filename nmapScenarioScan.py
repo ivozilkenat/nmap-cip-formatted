@@ -16,7 +16,7 @@ def run_if_file_not_existing(path):
     def __inner(func):
         def __innerinner(*args, **kwargs):
             if os.path.isfile(path):
-                print("> FILE FOUND: {path}")
+                print(f"> FILE FOUND: {path}")
                 return 
             return func(*args, **kwargs)
         return __innerinner
