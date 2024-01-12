@@ -189,7 +189,7 @@ if __name__ == "__main__":
         nmap_out_file_name = NMAP_OUT_FILE_BASE.format(r_ip)
         print(print_format.format(f"SCANNING IPv4 - {r_ip}"))
         run_if_file_not_existing(nmap_out_file_name)(scan_network)(
-            r_ip, ROUTER_PREFIX_GUESS, nmap_out_file_name
+            r_ip, local_prefix_len, nmap_out_file_name
         )
         
         # eval data here
