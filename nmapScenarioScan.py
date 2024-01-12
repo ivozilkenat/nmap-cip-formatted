@@ -184,7 +184,7 @@ if __name__ == "__main__":
     )
     router_ips = get_router_ips(nmap_out_file_name_routers)
     for r_ip in router_ips:
-        if ips_in_same_subnet(r_ip, ip):
+        if ips_in_same_subnet(r_ip, ip, local_prefix_len):
             continue
         nmap_out_file_name = NMAP_OUT_FILE_BASE.format(r_ip)
         print(print_format.format(f"SCANNING IPv4 - {r_ip}"))
