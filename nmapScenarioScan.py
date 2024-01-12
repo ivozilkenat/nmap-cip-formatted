@@ -16,7 +16,7 @@ def run_if_file_not_existing(path):
     def __inner(func):
         def __innerinner(*args, **kwargs):
             if os.path.isfile(path):
-                print(f"> FILE FOUND: {path}")
+                print(f"> FILE FOUND: '{path}'")
                 return 
             return func(*args, **kwargs)
         return __innerinner
@@ -162,7 +162,7 @@ if __name__ == "__main__":
         if r_ip == ip:
             continue
         nmap_out_file_name = NMAP_OUT_FILE_BASE.format(ip)
-        print(print_format.format("SCANNING IPv4 - {r_ip}"))
+        print(print_format.format(f"SCANNING IPv4 - {r_ip}"))
         run_if_file_not_existing(nmap_out_file_name)(scan_network)(
             r_ip, ROUTER_PREFIX_GUESS, nmap_out_file_name
         )
