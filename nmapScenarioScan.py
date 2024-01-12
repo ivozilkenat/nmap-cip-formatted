@@ -162,12 +162,17 @@ if __name__ == "__main__":
     run_if_file_not_existing(nmap_out_file_name_routers)(scan_for_routers)(
         ip, ROUTER_PREFIX_GUESS, nmap_out_file_name_routers
     )
+    scan_evaluation(
+        DATA_EVAL_FILE_BASE.format("routers-ipv4"), 
+        nmap_out_file_name_routers,
+    )
     router_ips = get_router_ips(nmap_out_file_name_routers)
     for r_ip in router_ips:
-        if r_ip == ip:
+        if r_ip == ip: # TODO: actually check if subnet is same
             continue
         nmap_out_file_name = NMAP_OUT_FILE_BASE.format(ip)
         print(print_format.format(f"SCANNING IPv4 - {r_ip}"))
+        print(nmap_out_file_name, r_ip)
         run_if_file_not_existing(nmap_out_file_name)(scan_network)(
             r_ip, ROUTER_PREFIX_GUESS, nmap_out_file_name
         )
