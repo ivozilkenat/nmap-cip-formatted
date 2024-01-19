@@ -75,8 +75,8 @@ def scan_network(ip, nmask, output_file_name="namp-out.xml"):
     )
     check_rcode(result.returncode, result.stderr)
 
-def scan_network_file(filename, output_file_name="file-nmap-out.xml"):
-    command = f'nmap -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS -iL {filename}'
+def scan_network_file(filename, output_file_name="file-nmap-out.xml", ipv6=false):
+    command = f'nmap {"-6" if ipv6 else ""} -oX "{output_file_name}" -sV -T4 --max-hostgroup=10 --max-parallelism=10 -A -sS -iL {filename}'
     result = subprocess.run(
         command, text=True, shell=True, stderr=subprocess.PIPE
     )
@@ -162,7 +162,7 @@ if __name__ == "__main__":
     )
     print(print_format.format("SCANNING IPv6 - local"))
     run_if_file_not_existing(nmap_out_file_name_ipv6)(scan_network_file)(
-        SCAN6_OUT_FILE_BASE, nmap_out_file_name_ipv6
+        SCAN6_OUT_FILE_BASE, nmap_out_file_name_ipv6, true
     )
     
     # eval data
