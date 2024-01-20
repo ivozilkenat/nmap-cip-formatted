@@ -162,7 +162,7 @@ if __name__ == "__main__":
     )
     print(print_format.format("SCANNING IPv6 - local"))
     run_if_file_not_existing(nmap_out_file_name_ipv6)(scan_network_file)(
-        SCAN6_OUT_FILE_BASE, nmap_out_file_name_ipv6, true
+        SCAN6_OUT_FILE_BASE, nmap_out_file_name_ipv6, True
     )
     
     # eval data
