@@ -41,13 +41,13 @@ class HostSystem:
     def same_host(self, other: object) -> bool:
         "Assumptions: both hosts use same encrpytion algorithms"
         
-        same_fingerprints = any(fprint in other.ssh_fingerprints_raw for fprint in self.ssh_fingerprints_raw) if self.ssh_fingerprints != {} else False
+        #same_fingerprints = any(fprint in other.ssh_fingerprints_raw for fprint in self.ssh_fingerprints_raw) if self.ssh_fingerprints != {} else False
         same_mac_address = self.mac_address == other.mac_address if self.mac_address is not None else False
-        same_services = self.services == other.services if self.services != [] else False
+        #same_services = self.services == other.services if self.services != [] else False
         
-        return same_fingerprints and same_mac_address and same_services
+        return same_mac_address and same_fingerprints and same_services
      
-    def merge_with(self, other_host, merge_reason = "Merged by: ssh fingerprint & services & mac address"):
+    def merge_with(self, other_host, merge_reason = "Merged by: mac address"): #"Merged by: ssh fingerprint & services & mac address"
         # TODO: correct assumption, that no new services can be found?
         
         new_ips = other_host.ip_addresses
