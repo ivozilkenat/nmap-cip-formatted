@@ -45,7 +45,7 @@ class HostSystem:
         same_mac_address = self.mac_address == other.mac_address if self.mac_address is not None else False
         #same_services = self.services == other.services if self.services != [] else False
         
-        return same_mac_address and same_fingerprints and same_services
+        return same_mac_address #and same_fingerprints and same_services
      
     def merge_with(self, other_host, merge_reason = "Merged by: mac address"): #"Merged by: ssh fingerprint & services & mac address"
         # TODO: correct assumption, that no new services can be found?
